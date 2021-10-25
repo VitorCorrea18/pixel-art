@@ -5,38 +5,39 @@ window.onload = function () {
   const btnRed = document.getElementById('red');
 
   btnBlack.classList.add('selected');
-  
-  btnBlue.addEventListener('click', function(event) {
-    let selectedElemt = document.querySelector('.selected');
-    selectedElemt.classList.remove('selected');
-    event.target.classList.add('selected');
-  })
-  
-  btnGreen.addEventListener('click', function(event) {
+
+  btnBlue.addEventListener('click', function (event) {
     let selectedElemt = document.querySelector('.selected');
     selectedElemt.classList.remove('selected');
     event.target.classList.add('selected');
   })
 
-  btnRed.addEventListener('click', function(event) {
+  btnGreen.addEventListener('click', function (event) {
     let selectedElemt = document.querySelector('.selected');
     selectedElemt.classList.remove('selected');
     event.target.classList.add('selected');
   })
 
-  btnBlack.addEventListener('click', function(event) {
+  btnRed.addEventListener('click', function (event) {
     let selectedElemt = document.querySelector('.selected');
     selectedElemt.classList.remove('selected');
     event.target.classList.add('selected');
   })
 
-  const btnPixel = document.querySelector('.pixel');
-
-  btnPixel.addEventListener('click', function(event) {
+  btnBlack.addEventListener('click', function (event) {
     let selectedElemt = document.querySelector('.selected');
-    console.log('clikado');
+    selectedElemt.classList.remove('selected');
+    event.target.classList.add('selected');
   })
 
+  let pixels = document.getElementsByClassName('pixel');
+  const container = document.getElementById('pixel-board');
+
+  for (i = 0; i < pixels.lenght; i += 1) {
+    pixels[i].addEventListener('click', function (event) {
+    console.log('hello World');
+    })
+  }
 
 
 }
