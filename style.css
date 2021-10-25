@@ -1,0 +1,76 @@
+.color {
+    border: black solid 1px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#black {
+    background-color: black;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+#pixel-board {
+    border: black solid 1px;
+    width: 500px;
+    height: 500px;
+    
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 27px 27px;
+}
+
+
+/* A Segunda forma que eu pensei em fazer os pixels 
+vou deixar comentada caso a primeira falhe no JS.
+
+#line1 .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+
+#line2 .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+
+#line3 .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+
+#line4 .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+}
+
+#line5 .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+} */
