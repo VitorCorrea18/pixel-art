@@ -3,7 +3,12 @@ window.onload = function () {
   const btnBlue = document.getElementById('blue');
   const btnGreen = document.getElementById('green');
   const btnRed = document.getElementById('red');
+  let pixels = document.querySelectorAll('.pixel');
   const btnClear = document.getElementById('clear-board');
+  
+  pixels.forEach(item => {
+    item.style.background = 'white';
+  })
   
   btnBlack.classList.add('selected');
 
@@ -31,7 +36,6 @@ window.onload = function () {
     event.target.classList.add('selected');
   })
 
-  let pixels = document.querySelectorAll('.pixel');
   
   pixels.forEach(item => {
     item.addEventListener('click', (Event) => {
