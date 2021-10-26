@@ -40,7 +40,19 @@
 }
 
 #clear-board {
-  width: 100px;
+  width: 80px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#board-size {
+  width: 50px;
+  padding: 10px;
+  margin: 1px;
+}
+
+#generate-board {
+  width: 80px;
   padding: 10px;
   margin: 10px;
 }
