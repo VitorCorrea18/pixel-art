@@ -30,14 +30,15 @@ window.onload = function () {
     event.target.classList.add('selected');
   })
 
-  let pixels = document.getElementsByClassName('pixel');
-  const container = document.getElementById('pixel-board');
-
-  for (i = 0; i < pixels.lenght; i += 1) {
-    pixels[i].addEventListener('click', function (event) {
-    console.log('hello World');
+  let pixels = document.querySelectorAll('.pixel');
+  
+  pixels.forEach(item => {
+    item.addEventListener('click', (Event) => {
+      let selectedElemt = document.querySelector('.selected');
+      console.log(selectedElemt);
+      Event.target.style.background = selectedElemt.id;
     })
-  }
-
+  })
+  
 
 }
