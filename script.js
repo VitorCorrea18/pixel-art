@@ -3,7 +3,8 @@ window.onload = function () {
   const btnBlue = document.getElementById('blue');
   const btnGreen = document.getElementById('green');
   const btnRed = document.getElementById('red');
-
+  const btnClear = document.getElementById('clear-board');
+  
   btnBlack.classList.add('selected');
 
   btnBlue.addEventListener('click', function (event) {
@@ -40,5 +41,10 @@ window.onload = function () {
     })
   })
   
+  btnClear.addEventListener('click', (Event) => {
+    pixels.forEach(item => {
+      item.style.background = 'white';
+    })
+  })
 
 }

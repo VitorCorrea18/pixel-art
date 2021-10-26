@@ -34,6 +34,12 @@
   width: 40px;
 }
 
+#clear-board {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+}
+
 
 /* A Segunda forma que eu pensei em fazer os pixels 
 vou deixar comentada caso a primeira falhe no JS.
