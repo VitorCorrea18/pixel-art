@@ -6,6 +6,8 @@ const btnClear = document.getElementById('clear-board');
 const btnVQV = document.getElementById('generate-board');
 
 function generateColor() {
+  // Esta funnção eu tive como referência um código do site CSS Tricks
+  // https://css-tricks.com/snippets/javascript/random-hex-color/
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   console.log(randomColor);
   if (randomColor !== '000000') {
