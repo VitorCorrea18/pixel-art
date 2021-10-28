@@ -1,9 +1,17 @@
 const btnBlack = document.getElementById('black');
-const btnBlue = document.getElementById('blue');
-const btnGreen = document.getElementById('green');
-const btnRed = document.getElementById('red');
+const btnColor1 = document.getElementById('color1');
+const btnColor2 = document.getElementById('color2');
+const btnColor3 = document.getElementById('color3');
 const btnClear = document.getElementById('clear-board');
 const btnVQV = document.getElementById('generate-board');
+
+function generateColor() {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  console.log(randomColor);
+  if (randomColor !== '000000') {
+    return `#${randomColor}`;
+  } generateColor();
+}
 
 function resetBoard() {
   const pixels = document.querySelectorAll('.pixel');
@@ -31,8 +39,9 @@ function fillBoard() {
       pixel.className = 'pixel';
       pixel.style.background = 'white';
       pixel.addEventListener('click', (Event) => {
+        const Click = Event;
         const selectedElemt = document.querySelector('.selected');
-        Event.target.style.background = selectedElemt.id;
+        Click.target.style.background = selectedElemt.style.background;
       });
       lines[indexLine].appendChild(pixel);
     }
@@ -69,14 +78,17 @@ function resizeBoard() {
 
 window.onload = () => {
   fillBoard();
-
   btnBlack.classList.add('selected');
+  btnBlack.style.background = 'black';
+  btnColor1.style.background = generateColor();
+  btnColor2.style.background = generateColor();
+  btnColor3.style.background = generateColor();
 
-  btnBlue.addEventListener('click', (event) => { selectBtn(event.target); });
+  btnColor1.addEventListener('click', (event) => { selectBtn(event.target); });
 
-  btnGreen.addEventListener('click', (event) => { selectBtn(event.target); });
+  btnColor2.addEventListener('click', (event) => { selectBtn(event.target); });
 
-  btnRed.addEventListener('click', (event) => { selectBtn(event.target); });
+  btnColor3.addEventListener('click', (event) => { selectBtn(event.target); });
 
   btnBlack.addEventListener('click', (event) => { selectBtn(event.target); });
 
