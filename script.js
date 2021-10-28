@@ -64,11 +64,10 @@ function clearColor() {
 
 function resizeBoard() {
   let inputValue = document.getElementById('board-size').value;
-  if (inputValue.length === 0) { alert('Board inválido!'); }
   if (inputValue < 5 && inputValue !== 0) { inputValue = 5; }
   if (inputValue > 50) { inputValue = 50; }
   resetBoard();
-  for (i = 0; i < inputValue; i += 1) {
+  for (let i = 0; i < inputValue; i += 1) {
     const newLine = document.createElement('div');
     newLine.className = 'line';
     document.getElementById('pixel-board').appendChild(newLine);
@@ -83,16 +82,13 @@ window.onload = () => {
   btnColor1.style.background = generateColor();
   btnColor2.style.background = generateColor();
   btnColor3.style.background = generateColor();
-
   btnColor1.addEventListener('click', (event) => { selectBtn(event.target); });
-
   btnColor2.addEventListener('click', (event) => { selectBtn(event.target); });
-
   btnColor3.addEventListener('click', (event) => { selectBtn(event.target); });
-
   btnBlack.addEventListener('click', (event) => { selectBtn(event.target); });
-
   btnClear.addEventListener('click', () => { clearColor(); });
-
-  btnVQV.addEventListener('click', () => { resizeBoard(); });
+  btnVQV.addEventListener('click', () => {
+    if (document.getElementById('board-size').value.length === 0) { alert('Board inválido!'); }
+    resizeBoard();
+  });
 };
